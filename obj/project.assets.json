@@ -1055,19 +1055,19 @@
     ]
   },
   "packageFolders": {
-    "/home/codespace/.nuget/packages/": {}
+    "C:\\Users\\srjunior2\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/workspaces/sandro-codeflow/codeflow-project.csproj",
+      "projectUniqueName": "C:\\Users\\srjunior2\\OneDrive - Stefanini\\Documentos\\codeFlow\\sandro-codeflow\\codeflow-project.csproj",
       "projectName": "codeflow-project",
-      "projectPath": "/workspaces/sandro-codeflow/codeflow-project.csproj",
-      "packagesPath": "/home/codespace/.nuget/packages/",
-      "outputPath": "/workspaces/sandro-codeflow/obj/",
+      "projectPath": "C:\\Users\\srjunior2\\OneDrive - Stefanini\\Documentos\\codeFlow\\sandro-codeflow\\codeflow-project.csproj",
+      "packagesPath": "C:\\Users\\srjunior2\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\srjunior2\\OneDrive - Stefanini\\Documentos\\codeFlow\\sandro-codeflow\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/codespace/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\srjunior2\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -1138,11 +1138,15 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.31, 8.0.31]"
+            "version": "[8.0.32, 8.0.32]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.31, 8.0.31]"
+            "version": "[8.0.32, 8.0.32]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.32, 8.0.32]"
           }
         ],
         "frameworkReferences": {
@@ -1150,7 +1154,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\srjunior2\\.dotnet\\sdk\\10.0.402/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
