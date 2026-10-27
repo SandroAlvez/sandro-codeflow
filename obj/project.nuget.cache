@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0+D0/esCrso=",
+  "dgSpecHash": "4jUeccD4zNo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\srjunior2\\OneDrive - Stefanini\\Documentos\\codeFlow\\sandro-codeflow\\codeflow-project.csproj",
+  "projectFilePath": "C:\\Users\\srjunior2\\OneDrive - Stefanini\\Documentos\\codeFlow\\sandroCodeflow\\codeflow-project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\srjunior2\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\srjunior2\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",
@@ -14,11 +14,7 @@
     "C:\\Users\\srjunior2\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\srjunior2\\.nuget\\packages\\nuget.frameworks\\6.5.0\\nuget.frameworks.6.5.0.nupkg.sha512",
     "C:\\Users\\srjunior2\\.nuget\\packages\\selenium.webdriver\\4.50.0\\selenium.webdriver.4.50.0.nupkg.sha512",
-    "C:\\Users\\srjunior2\\.nuget\\packages\\selenium.webdriver.chromedriver\\155.0.8059.3900\\selenium.webdriver.chromedriver.155.0.8059.3900.nupkg.sha512",
-    "C:\\Users\\srjunior2\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512",
-    "C:\\Users\\srjunior2\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.32\\microsoft.netcore.app.ref.8.0.32.nupkg.sha512",
-    "C:\\Users\\srjunior2\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.32\\microsoft.windowsdesktop.app.ref.8.0.32.nupkg.sha512",
-    "C:\\Users\\srjunior2\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.32\\microsoft.aspnetcore.app.ref.8.0.32.nupkg.sha512"
+    "C:\\Users\\srjunior2\\.nuget\\packages\\selenium.webdriver.chromedriver\\155.0.8059.3900\\selenium.webdriver.chromedriver.155.0.8059.3900.nupkg.sha512"
   ],
   "logs": []
 }

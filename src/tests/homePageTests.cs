@@ -3,35 +3,30 @@ using OpenQA.Selenium.Chrome;
 using sandroCodeflow.src.pages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+
 namespace sandroCodeflow.src.tests;
 
 [TestClass]
-public class HomePageTests
+public class HomePageTests : TestBase
 {
-    private IWebDriver? driver;
 
-    //Open browser
-    public void openChrome()
-    {
-        var options = new ChromeOptions();
-        options.AddArgument("--headless=new"); // 👈 Essencial para rodar no Codespaces/Linux
-        options.AddArgument("--no-sandbox");
-        options.AddArgument("--disable-dev-shm-usage");
-
-        driver = new ChromeDriver(options);        
-    }
 
     [TestMethod]
-    public void searchTest(string text)
+    public void AccessHomePage()
     {
+        HomePage homePage = new HomePage(driver);
         //Go to website
-        driver!.Navigate().GoToUrl("https://opensourcedesign.net/");
+        driver.Navigate().GoToUrl(homePage.homePageUrl);
+        
+        //Verify if home page is loaded
+        Assert.AreEqual("Open Source Design", homePage.pageTitle);
 
         //Calls homePage.cs
-        HomePage page = new HomePage(driver);
+            //HomePage page = new HomePage(driver);
         //Search for something
-        text = "Design";
-        page.search(text);
+            // text = "Design";
+            // page.search(text);
+        
     }
 
 }
