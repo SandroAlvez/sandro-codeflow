@@ -10,14 +10,14 @@ public class TestBase
     public IWebDriver driver;
 
     [TestInitialize]
-    public void setup()
+    public void SetUp()
     {
         driver = new ChromeDriver();
     }
 
-    [TestCleanup]
-    public void tearDown()
+   // [TestCleanup]
+   /* public void TearDown()
     {
         driver.Quit();
-    }
+    }*/
 }
