@@ -12,7 +12,8 @@ public class HomePageTests : TestBase
     private string searchText = "Design";
 
     [TestMethod]
-    public void AccessHomePage()
+    //Temporary test to verify if methods in homePage.cs are working as expected
+    public void FlowTest()
     {
         //Calls homePage.cs
         HomePage homePage = new HomePage(driver);
@@ -23,20 +24,18 @@ public class HomePageTests : TestBase
         //Verify if home page is loaded
         Assert.AreEqual("Open Source Design", homePage.PageTitle);
 
-        
-
-
         //Make a search
         homePage.Search(searchText); 
 
-                //Get the search results
-        string[] searchResults = homePage.GetSearchResults();
+        //Get the search results
+        IReadOnlyCollection<IWebElement> searchResults = homePage.GetSearchResultsElements();
 
 
         //Verify if the text is found in the search results
-        foreach (string result in searchResults)
+        foreach (IWebElement result in searchResults)
         {
-            Assert.IsTrue(result.Contains(searchText, StringComparison.OrdinalIgnoreCase));
+            Assert.IsTrue(result.Text.Contains(searchText, StringComparison.OrdinalIgnoreCase));
+            
         }
         
     }
@@ -62,5 +61,18 @@ public class HomePageTests : TestBase
             Assert.IsTrue(result.Contains("Design"));
         }
     }*/
+
+    //[TestMethod]
+    public void AccessHomePage()
+    {
+        //Calls homePage.cs
+        HomePage homePage = new HomePage(driver);
+
+        //Go to website
+        driver.Navigate().GoToUrl(homePage.homePageUrl);
+        
+        //Verify if home page is loaded
+        Assert.AreEqual("Open Source Design", homePage.PageTitle);
+    }
 
 }

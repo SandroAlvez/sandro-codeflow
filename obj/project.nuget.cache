@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "4jUeccD4zNo=",
+  "dgSpecHash": "V2yxALZIPUU=",
   "success": true,
   "projectFilePath": "C:\\Users\\srjunior2\\OneDrive - Stefanini\\Documentos\\codeFlow\\sandroCodeflow\\codeflow-project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\srjunior2\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
+    "C:\\Users\\srjunior2\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
     "C:\\Users\\srjunior2\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",
     "C:\\Users\\srjunior2\\.nuget\\packages\\microsoft.net.test.sdk\\17.8.0\\microsoft.net.test.sdk.17.8.0.nupkg.sha512",
     "C:\\Users\\srjunior2\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.8.0\\microsoft.testplatform.objectmodel.17.8.0.nupkg.sha512",

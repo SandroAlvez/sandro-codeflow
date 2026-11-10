@@ -1,24 +1,36 @@
 using OpenQA.Selenium;
-using OpenQA.Selenium.DevTools.V152.Runtime;
-using sandroCodeflow.src.tests;
-using System;
+using OpenQA.Selenium.Support.UI;
 
 namespace sandroCodeflow.src.pages;
 
 public class HomePage {   
 
+    //Private field for the WebDriver instance
+    private IWebDriver driver;
+
+    //Explicit wait
+    private WebDriverWait wait;
+
+    //Constructor for the HomePage class
     public HomePage(IWebDriver driver)
     {
         this.driver = driver;
+        this.wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+        
     }
-    private IWebDriver driver;
+  
 
+    //URL for the home page
     public string homePageUrl = "https://opensourcedesign.net/";
+
+    //Property to get the title of the page
     public string PageTitle => driver.Title;
+
+    //Locator for the search bar
     private IWebElement SearchBar => driver.FindElement(By.XPath("//*[@id='osd-search-dialog']/div/form/input"));
 
     //Array for elements that are found in the search results
-    private IReadOnlyCollection<IWebElement> SearchResults => driver.FindElements(By.ClassName("osd-search__result-excerpt"));
+    private IReadOnlyCollection<IWebElement> ListOfSearchResults => driver.FindElements(By.Id("osd-search-results"));
 
     //Locator for search button
     private IWebElement MagnifyingGlass => driver.FindElement(By.XPath("//*[@title='Search (Ctrl/⌘ K)']"));
@@ -29,29 +41,35 @@ public class HomePage {
     //Function to perform a search on the home page
     public void Search(string searchText)
     {
+
+        wait.Until(driver => MagnifyingGlass.Displayed);
         MagnifyingGlass.Click();
-        SearchBar.SendKeys(searchText);
-
-        Thread.Sleep(2000);
-
-        if (SearchResultsContent.Text == $"No results found for {searchText}")
+        if (SearchBar.Displayed)
         {
-            Console.WriteLine("Search didn't return any results");
-        }
-
-    }
-
-    //Function to get the results of the search
-    public string[] GetSearchResults()
-    { 
-
-        if (SearchResults.Count > 0)
-        {
-            return SearchResults.Select(el => el.Text).ToArray();
+            SearchBar.SendKeys(searchText);
         }
         else
         {
-            return Array.Empty<string>();
+            Console.WriteLine("MagnifyingGlass locator didn't find any elements");
+        }
+               
+
+    }
+
+    //Function to get the search results
+    public IReadOnlyCollection<IWebElement> GetSearchResultsElements()
+    { 
+        //Wait for the search results to load
+        wait.Until(driver => SearchResultsContent.Displayed);
+        if (ListOfSearchResults.Count > 0)
+        {
+            return ListOfSearchResults;
+        }
+        else
+        {
+            Console.WriteLine("SearchResultsElements locator didn't find any elements");
+            return ListOfSearchResults;
+            
         }
   
     }
