@@ -26,14 +26,14 @@ public class HomePage {
     //Property to get the title of the page
     public string PageTitle => driver.Title;
 
+    //Locator for search button
+    private IWebElement MagnifyingGlass => driver.FindElement(By.XPath("//*[@title='Search (Ctrl/⌘ K)']"));
+
     //Locator for the search bar
     private IWebElement SearchBar => driver.FindElement(By.XPath("//*[@id='osd-search-dialog']/div/form/input"));
 
     //Array for elements that are found in the search results
-    private IReadOnlyCollection<IWebElement> ListOfSearchResults => driver.FindElements(By.Id("osd-search-results"));
-
-    //Locator for search button
-    private IWebElement MagnifyingGlass => driver.FindElement(By.XPath("//*[@title='Search (Ctrl/⌘ K)']"));
+    public IReadOnlyCollection<IWebElement> ListOfSearchResults => driver.FindElements(By.ClassName("osd-search__result-main"));
     
     //Locator for content of the search results
     private IWebElement SearchResultsContent => driver.FindElement(By.XPath("//div[@class='osd-search__panel']//p"));
@@ -59,18 +59,11 @@ public class HomePage {
     //Function to get the search results
     public IReadOnlyCollection<IWebElement> GetSearchResultsElements()
     { 
+        
         //Wait for the search results to load
-        wait.Until(driver => SearchResultsContent.Displayed);
-        if (ListOfSearchResults.Count > 0)
-        {
-            return ListOfSearchResults;
-        }
-        else
-        {
-            Console.WriteLine("SearchResultsElements locator didn't find any elements");
-            return ListOfSearchResults;
-            
-        }
+        wait.Until(driver => ListOfSearchResults.Count > 0);
+        Console.WriteLine("SearchResultsElements locator found " + ListOfSearchResults.Count + " elements");
+        return ListOfSearchResults;
   
     }
 

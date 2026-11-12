@@ -30,7 +30,6 @@ public class HomePageTests : TestBase
         //Get the search results
         IReadOnlyCollection<IWebElement> searchResults = homePage.GetSearchResultsElements();
 
-
         //Verify if the text is found in the search results
         foreach (IWebElement result in searchResults)
         {
